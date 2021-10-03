@@ -1,0 +1,35 @@
+{% extends "apprestaurante/base.html" %}
+
+{% load static %}
+
+
+{%block content %}
+
+    <section class="flayer-principal">
+        <div>
+            <img src="{%static 'apprestaurante/img/principalflayer.jpg' %}" alt="">
+        </div>
+    </section>
+
+    <section class="container" style="padding-top: 20px; padding-bottom: 50px;" >   
+        <div>
+                <h4 style="text-align: center; padding-bottom: 50px;">{{categoria.nombre}}</h4>
+        </div>
+
+        {% for producto in categoria.producto_set.all %}
+
+        <div style="display: flex; flex-flow: row wrap; justify-content: space-around;">
+                <a href="{{producto.get_absolute_url}}" class="ms-item-container">
+                    <div class="card-product">
+                        <img src={{producto.imagen.url}} height="300px">
+                        <p>{{producto.nombre}}</p>
+                    </div>      
+                </a>
+        </div>
+
+        {% endfor %}
+
+
+    </section>
+
+{% endblock %}

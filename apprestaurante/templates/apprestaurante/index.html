@@ -1,0 +1,27 @@
+{% extends "apprestaurante/base.html" %}
+
+{% load static %}
+
+{%block content %} 
+    <section class="flayer-principal">
+        <div>
+            <img src="{%static 'apprestaurante/img/principalflayer.jpg' %}" alt="">
+        </div>
+    </section>
+    <section class="container" style="padding-top: 20px; padding-bottom: 50px;" >
+        <div>
+            <h4 style="text-align: center; padding-bottom: 50px;">PROMOCIONES SOLO POR HOY!</h4>
+        </div>
+        <div style="display: flex; flex-flow: row wrap; justify-content: space-around;">
+            <div class="card-product">
+                <img src="{%static 'apprestaurante/img/hamburguesa.png' %}" alt="Hamburguesa" height="300px">
+                <p>Triple Burger</p>
+            </div>
+            <div class="card-product">
+                <img src="{%static 'apprestaurante/img/parrilla.png' %}" alt="Parrillas" height="300px">
+                <p>El parrillero familiar</p>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
