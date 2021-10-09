@@ -67,6 +67,9 @@ class Categoria(models.Model):
         return self.nombre
 
 
+    def get_absolute_url(self):
+        return reverse('apprestaurante:categoria',kwargs={'slug':self.slug})
+
 
 class Promociones(models.Model):
     nombre = models.CharField(max_length=30)

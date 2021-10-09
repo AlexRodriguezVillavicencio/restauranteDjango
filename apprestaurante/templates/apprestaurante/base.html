@@ -38,7 +38,7 @@
                                 {% if categorias %}
                                 {% for categoria in categorias %}
                                 <div>
-                                    <a href="{{categoria.slug }}" class="ms-item-container">
+                                    <a href="{{categoria.get_absolute_url }}" class="ms-item-container">
                                         <div class="item-menu-card" >
                                             <img class="ms-item-image"  src={{categoria.imagen.url}}>
                                             <span class="ms-item-name" >{{categoria.nombre}}</span>

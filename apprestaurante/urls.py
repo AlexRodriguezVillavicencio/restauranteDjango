@@ -6,7 +6,7 @@ app_name= 'apprestaurante'
 urlpatterns = [
     path('',views.inicio, name="inicio"),
     path('<slug>/',views.categoria, name="categoria"),
-    path('/<slug>/',views.producto, name="producto"),
+    path('<slug>',views.producto, name="producto"),
 
 ]
 
